@@ -5,8 +5,8 @@ class Contato {
     private $con_nome;
     private $con_telefone;
     private $con_cpf;
-    private $bre_id; // cidade id
-    private $bro_id; // estado id
+    private $bre_id; 
+    private $bro_id; 
 
     // Métodos getter e setter para cada propriedade
     public function getConId() {
@@ -111,7 +111,7 @@ class Contato {
     // Função para obter todos os contatos do banco de dados
     public static function obterTodosContatos() {
         try {
-            global $pdo; // Certifique-se de que $pdo está definido globalmente
+            global $pdo; 
 
             $stmt = $pdo->query("SELECT * FROM contatos");
             $contatos = $stmt->fetchAll(PDO::FETCH_ASSOC);

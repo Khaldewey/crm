@@ -1,8 +1,5 @@
 <?php
-// ajax_obter_cidades.php
 
-// Suponha que você tenha uma instância do PDO já configurada
-// Certifique-se de configurar a conexão com o seu banco de dados corretamente
 require_once '../../../app/config/database.php';
 
 // Verifica se o parâmetro estado_id foi passado

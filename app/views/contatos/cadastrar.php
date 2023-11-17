@@ -1,4 +1,3 @@
-<!-- app/views/contatos/cadastrar.php -->
 <?php 
 require_once '../../../app/controllers/contatosController.php';
 ?>
@@ -10,15 +9,15 @@ require_once '../../../app/controllers/contatosController.php';
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script>
         $(document).ready(function() {
-            // Quando o valor do dropdown de estado é alterado
+          
             $('#bro_id').change(function() {
-                // Obtemos o valor selecionado
+                
                 var estadoId = $(this).val();
 
-                // Fazemos uma requisição AJAX para obter as cidades do estado selecionado
+                // Requisição AJAX para obter as cidades do estado selecionado
                 $.ajax({
                     type: 'POST',
-                    url: 'ajax_obter_cidades.php', // Substitua pelo caminho real do seu arquivo PHP
+                    url: 'ajax_obter_cidades.php', 
                     data: { estado_id: estadoId },
                     dataType: 'json',
                     success: function(data) {
@@ -40,7 +39,7 @@ require_once '../../../app/controllers/contatosController.php';
         <div class="titulo-tabela">Cadastrar Novo Contato</div>
         <div class="flex">
             <form action="index.php?action=salvar" method="post" class="form-cadastro">
-                <!-- Campos do formulário -->
+               
                 <div class="col-md-12 col-xs-12">
                     <label for="con_nome">Nome:</label>
                     <input type="text" name="con_nome" required>
@@ -56,7 +55,7 @@ require_once '../../../app/controllers/contatosController.php';
                 <div class="col-md-6 col-sm-6 col-xs-12">
                     <label for="bro_id">Estado:</label>
                     <select id="bro_id" name="bro_id" required>
-                        <!-- Adicione as opções de estados aqui -->
+                        
                         <?php foreach ($informacoesCidadeEstado['estados'] as $estado): ?>
                             <option value="<?php echo $estado['bro_id']; ?>"><?php echo $estado['bro_nome']; ?></option>
                         <?php endforeach; ?>
@@ -65,7 +64,7 @@ require_once '../../../app/controllers/contatosController.php';
                 <div class="col-md-6 col-sm-6 col-xs-12">
                     <label for="bre_id">Cidade:</label>
                     <select id="bre_id" name="bre_id" required>
-                        <!-- As opções de cidade serão preenchidas dinamicamente pelo JavaScript -->
+                       
                     </select>
                 </div>
                 <div class="col-md-12 col-xs-12">

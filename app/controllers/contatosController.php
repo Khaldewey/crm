@@ -1,5 +1,5 @@
 <?php
-// app/controllers/contatosController.php
+
 
 require_once '../../../app/models/Contato.php';
 
@@ -14,7 +14,7 @@ class ContatosController {
             $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
             foreach ($result as $row) {
-                // Crie instâncias da classe Contato para cada registro do banco de dados
+                
                 $contato = new Contato();
                 $contato->setConId($row['con_id']);
                 $contato->setConNome($row['con_nome']);
@@ -23,7 +23,7 @@ class ContatosController {
                 $contato->setBreId($row['bre_id']);
                 $contato->setBroId($row['bro_id']);
 
-                // Adicione o objeto Contato ao array
+                
                 $contatos[] = $contato;
             }
 
@@ -57,18 +57,13 @@ class ContatosController {
                 // Chama o método salvarContato()
                 $contato->salvarContato();
     
-                // Redireciona para a página principal
+                
                 header('Location: index.php');
             } else {
                 echo "Todos os campos são obrigatórios. Preencha todos os campos e tente novamente.";
             }
         }
-        // Função para processar o formulário de cadastro
-        // e salvar um novo contato no banco de dados
-        // $contato = new Contato();
-        // Preencha as propriedades do objeto $contato com os dados do formulário
-        // $contato->salvarContato();
-        // header('Location: index.php');
+        
     }
 
     public function editar($con_id) {
@@ -80,7 +75,6 @@ class ContatosController {
     }
 
     public function atualizar() {
-        // Verifique se todos os dados necessários estão disponíveis no $_POST
         $con_id = $_GET['con_id'];
         $con_nome = $_POST['con_nome'];
         $con_telefone = $_POST['con_telefone'];
@@ -91,7 +85,7 @@ class ContatosController {
         // Função para processar o formulário de edição
         // e atualizar as informações do contato no banco de dados
         $contato = new Contato();
-        // Preencha as propriedades do objeto $contato com os dados do formulário
+        
         $contato->atualizarContato($con_id, $con_nome, $con_telefone, $con_cpf, $bre_id, $bro_id);
         header('Location: index.php');
     }

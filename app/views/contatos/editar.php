@@ -8,12 +8,12 @@ require_once '../../../app/controllers/contatosController.php';
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script>
         $(document).ready(function() {
-            // Quando o valor do dropdown de estado é alterado
+            
             $('#bro_id').change(function() {
-                // Obtemos o valor selecionado
+                
                 var estadoId = $(this).val();
 
-                // Fazemos uma requisição AJAX para obter as cidades do estado selecionado
+                // Requisição AJAX para obter as cidades do estado selecionado
                 $.ajax({
                     type: 'POST',
                     url: 'ajax_obter_cidades.php', // Substitua pelo caminho real do seu arquivo PHP
@@ -38,8 +38,7 @@ require_once '../../../app/controllers/contatosController.php';
         <div class="titulo-tabela">Editar Contato</div>
         <div class="flex">
             <form action="index.php?action=atualizar&con_id=<?php echo $contato->getConId(); ?>" method="post" class="form-cadastro">
-                <!-- Campos do formulário -->
-                <!-- Preencha os campos com os dados do $contato -->
+            
                 <div class="col-md-12 col-xs-12">
                     <label for="con_nome">Nome:</label>
                     <input type="text" name="con_nome" value="<?php echo $contato->getConNome(); ?>" required>

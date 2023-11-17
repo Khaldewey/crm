@@ -1,19 +1,12 @@
 <?php
 
-// index.php
 
 require_once '../../../app/controllers/contatosController.php';
 
 // Cria uma instância do ContatosController
 $contatosController = new ContatosController();
 $contatos = $contatosController->index();
-// Verifica a ação a ser realizada (editar, excluir, cadastrar, etc.)
-// if (isset($_GET['action'])) {
-//     // Lógica para as outras ações, se necessário
-// } else {
-//     // Se não houver uma ação específica, exibe a lista de contatos
-//     $contatosController->index();
-// }
+
 ?>
 
 <html>
@@ -22,10 +15,10 @@ $contatos = $contatosController->index();
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
-    <!-- Optional theme -->
+    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
-    <!-- Latest compiled and minified JavaScript -->
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="../../assets/stylesheet/style.css" >
