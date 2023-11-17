@@ -1,0 +1,119 @@
+body{
+    padding: 5rem 0rem;
+    background: #f3f7f9;
+}
+.titulo-tabela{
+    font-size: 3rem;
+    font-family: 'Lato', sans-serif;
+    color: #939191;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+}
+.filtro-lista{
+    display: flex;
+    justify-content: center;
+    margin: 5rem 0rem;
+}
+label{
+    padding-right: 2rem;
+    font-family: 'Lato', sans-serif;
+    color: #a9a7a7;
+    font-weight: 400;
+    margin-top: 0.5rem;
+}
+input, select{
+    border: 0.1rem solid #c7c7c7;
+    border-radius: 2rem;
+    background: transparent;
+    padding-left: 2rem;
+}
+table{
+    width: 100%;
+    font-family: 'Lato', sans-serif;
+}
+table th{
+    padding: 0.8rem 5rem;
+    text-align: center;
+}
+table td{
+    padding: 0.6rem 5rem;
+    text-align: center;
+    font-size: 1.3rem;
+}
+p{
+    font-family: 'Lato', sans-serif;
+    margin: 5rem 0rem;
+    font-weight: 700;
+    text-align: center;
+}
+.btn-novo-contato{            
+    display: flex;
+    justify-content: center;
+}
+.btn-novo-contato a{   
+    border-radius: 2rem;
+    background: #3785eb;
+    color: #fff;
+    font-weight: 700;
+    font-family: 'Lato', sans-serif;
+    padding: 0.8rem 3rem;
+    margin: 3rem 0rem;
+    letter-spacing: 0.1rem;
+}
+.btn-editar{
+    background: green;
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-top: 0.6rem;
+}
+.btn-excluir{
+    background: red;
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-top: 0.6rem;
+    margin-left: 1rem;
+}
+.flex{
+    display: flex;
+    justify-content: center;
+}
+.form-cadastro{
+    background: #fff;
+    padding: 5rem;
+    border-radius: 2rem;
+    font-family: 'Lato', sans-serif;
+    width: 70%;
+    margin-bottom: 6rem;
+}
+.form-cadastro input, .form-cadastro select{
+    border: 0.1rem solid #c7c7c7;
+    border-radius: 2rem;
+    background: transparent;
+    padding: 0.6rem 1rem 0.6rem 2rem;
+    width: 100%;
+    margin-bottom: 0.8rem;
+}
+.form-cadastro .btn-cadastro{
+    margin-top: 3rem;
+    width: 30%;
+    background: #3785eb;
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+.form-cadastro .btn-sair{
+    margin-top: 3rem;
+    width: 30%;
+    background: #f1b01d;
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;    
+    margin-left: 2rem;
+    border-radius: 2rem;
+    padding: 0.6rem;
+    height: 3.3rem;
+}
